@@ -1,0 +1,11 @@
+@use "sass:color";
+
+@mixin headersColor() {
+  @for $i from 1 through 4 {
+    h#{$i} {
+      color: color.scale(tomato, $lightness: $i * 15%);
+    }
+  }
+}
+
+@include headersColor;
